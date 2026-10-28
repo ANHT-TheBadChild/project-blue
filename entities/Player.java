@@ -1,14 +1,15 @@
 package blue.entities;
 
+import java.util.List;
 /**
  *
  * @author pixll
  */
 import java.util.Scanner;
 
-import blue.items.inventory;
+import blue.items.Inventory;
 
-public class Player extends inventory{
+public class Player extends Inventory{
     Scanner scan=new Scanner(System.in);
     //PLlayer Details
     String playerName;
@@ -20,6 +21,9 @@ public class Player extends inventory{
             phyDefense = 10;
     private int enAttackPoints = 10, enDefensePoints = 10, 
             speedPoints = 15;
+
+    // private String currentWeapon;
+
     
     public void getDetails(){
         char detailsVerifier;
@@ -27,6 +31,7 @@ public class Player extends inventory{
         do{
             System.out.print("Please your name, Player: \t");
             playerName = scan.nextLine();
+            
             
             while(true){
                 try {
@@ -47,6 +52,7 @@ public class Player extends inventory{
                     break;
                 }
             }
+            scan.nextLine();
             
             System.out.println("-----Player Details-----");
             System.out.println("Name: " + playerName + 
@@ -71,8 +77,6 @@ public class Player extends inventory{
             }
             scan.nextLine();
         }while(detailsVerifier!='y' && detailsVerifier!='Y');
-
-        scan.close();
     }
     
     public void displayDetails(){
@@ -117,5 +121,20 @@ public class Player extends inventory{
         
     }
 
+    //Inventory
+    public void addItem(String item, List<String>playerInventory){
+        
+    }
 
+    public void removeItem(String item, List<String>playerInventory){
+        
+    }
+
+    public void openInventory(char userInput, List<String> playerInventory){
+        
+    }
+
+    public void  investigate(String object, String desc){
+        
+    }
 }
