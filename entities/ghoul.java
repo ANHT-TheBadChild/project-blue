@@ -4,11 +4,7 @@ package blue.entities;
  *
  * @author pixll
  */
-public class entity {
-    //Stats
-    int healthPoints, phyAtk, phyDef, enAtkPoints, enDefPoints, speedPoints;
-
-    //details
-    String name, desc;
-    int exp_yield, level;
+import blue.items.*;
+public class ghoul extends entity{
+    Inventory inventory = new Inventory();
 }
